@@ -212,13 +212,11 @@
   display: grid;
   gap: 10px;
 }
-
 .gallery__image {
   display: block;
-  object-fit: cover;
-  object-position: center;
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
 }
 
 /* ============================= */
@@ -244,7 +242,7 @@
 /* Медиа: планшет */
 /* ============================= */
 
-@media (768px <= width < 1024px) {
+@media (width >= 768px) {
   .header {
     padding: 20px;
   }
@@ -298,6 +296,7 @@
 
   .gallery__images {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     gap: 20px;
   }
 
